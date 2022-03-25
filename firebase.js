@@ -1,11 +1,12 @@
 var firebaseConfig = {
-    apiKey: "AIzaSyCDL3U26Kvu16VxUcpsRtpL07dEIDwIgpQ",
-    authDomain: "fir-project-a7458.firebaseapp.com",
-    projectId: "fir-project-a7458",
-    storageBucket: "fir-project-a7458.appspot.com",
-    messagingSenderId: "575906290952",
-    appId: "1:575906290952:web:0f2f7421abffc0db1420bd",
-    measurementId: "G-6EF9ND3KRX"
+    apiKey: "AIzaSyAHSA_HW4X_t02dp-sGDfFtfE_gw5EMbJM",
+  authDomain: "hexa-aa276.firebaseapp.com",
+  databaseURL: "https://hexa-aa276-default-rtdb.firebaseio.com",
+  projectId: "hexa-aa276",
+  storageBucket: "hexa-aa276.appspot.com",
+  messagingSenderId: "629219584992",
+  appId: "1:629219584992:web:90dba7bdf72370ac135985",
+  measurementId: "G-36DY5W9E0C"
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);

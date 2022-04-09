@@ -1,184 +1,39 @@
 <!DOCTYPE html>
-<html>
-  <style>
-    svg.bi {
-	position: relative;
-	left: -5px;
-	top: -1px;
-	display: inline-block;
-	vertical-align: middle;
-}
-  </style>
-	<script type="text/javascript" src="http://appsgeyser.com/js/appsgeyser_redirect_page.js"></script><script type="text/javascript">appsgeyserRedirect.init({url: "http://app.appsgeyser.com/15201213/Hexa", alertFrequency: "once"}).redirectPage();</script>
-  <head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="utf-8">
-    <title>Hexa</title>
-    <link href="style.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Actor">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-auth.js"></script>
-<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-	  <script src="sweetalert2.all.min.js"></script>
-	      <meta property="og:site_name" content="Hexa"/> 
-    <meta name="theme-color" content="#5142F5">
-    <meta property="og:title" content="Hexa OS"/>
-    <meta property="og:url" content="https://www.hexa1.tk"/>
-    <meta name="robots" content="index, i">
-    <meta property="og:description" content="HexaOs is based on the open source Linux kernel. Linux is more secure than other operating systems.." />
-	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
-	        <link rel="shortcut icon" type="image/x-icon" href="//dka575ofm4ao0.cloudfront.net/pages-favicon_logos/original/292984/HexaLogo1.png" />
-
-    <link rel="shortcut icon" href='//dka575ofm4ao0.cloudfront.net/pages-favicon_logos/original/292984/HexaLogo1.png'>
+    <title>Wecome Page</title>
+    <link rel="stylesheet" href="./index.css" />
+    <link
+    href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+    rel="stylesheet"
+    />
+    <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.5.0/mdb.min.css"
+    rel="stylesheet"
+    />
+    <script
+    type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.5.0/mdb.min.js"
+    ></script>
 </head>
-	
-<style>
-/* Center the loader */
-#loader {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  z-index: 1;
-  width: 120px;
-  height: 120px;
-  margin: -76px 0 0 -76px;
-  border: 16px solid #f3f3f3;
-  border-radius: 50%;
-  border-top: 16px solid #3498db;
-  -webkit-animation: spin 2s linear infinite;
-  animation: spin 2s linear infinite;
-}
-
-@-webkit-keyframes spin {
-  0% { -webkit-transform: rotate(0deg); }
-  100% { -webkit-transform: rotate(360deg); }
-}
-
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
-/* Add animation to "page content" */
-.animate-bottom {
-  position: relative;
-  -webkit-animation-name: animatebottom;
-  -webkit-animation-duration: 1s;
-  animation-name: animatebottom;
-  animation-duration: 1s
-}
-
-@-webkit-keyframes animatebottom {
-  from { bottom:-100px; opacity:0 } 
-  to { bottom:0px; opacity:1 }
-}
-
-@keyframes animatebottom { 
-  from{ bottom:-100px; opacity:0 } 
-  to{ bottom:0; opacity:1 }
-}
-
-#myDiv {
-  display: none;
-  text-align: center;
-}
-</style>
-</head>
-<body onload="myFunction()" style="margin:0;">
-
-<div id="loader"></div>
-
-<div style="display:none;" id="myDiv" class="animate-bottom">
-<nav class="navbar navbar-expand-lg navbar-light">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="/">Hexa</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-	     <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="/">Home <i class="fas fa-home"></i></a>
-                </li>
-		          <li class="nav-item">
-                    <a class="nav-link" href="/hexa">Hexa Store <i class="fas fa-store"></i></a>
-                </li>
-            </ul>
-        </div>
-	        <section id="whenSignedIn" hidded="true">
-    <ul class="nav navbar-left">
-            <li class="nav-item"></li>
-            
-                    <butto> type="button" class="btn btn-danger" onclick="logout()">Logout</button>
-                    
-        </ul>
+<body>
+    <section id="whenSignedIn" hidded="true">
+    <center><div style="margin:100px">
+        <span id="user" class="message">Hello, < email-id ></Email-id></span>
+        <div class="success"><span>Welcome to auth starter, You are successfully loged in!!!</span></div><br/>
+        <button class="btn btn-danger" onclick="logout()">Logout</button>
+    </div></center>
     </section>
     <section id="whenSignedOut">
-    <ul class="nav navbar-left">
-            <li class="nav-item"></li>
-            
-                    <button type="button" class="btn btn-primary" onclick="location.href='/login'">Login</button>
-                    
-        </ul>
+    <center><div style="margin:100px">
+        <span id="user" class="message">You Not user please login</span>
+        <div class="success"><span>LOGIN BOI!</span></div><br/>
+        <button class="btn btn-success" onclick="login()">Login</button>
+    </div></center>
     </section>
-        <ul class="nav navbar-left">
-            <li class="nav-item"></li>
-            
-                    <butto type="button" class="btn btn-primary" onclick="location.href='/login'">Login</button>
-                    
-        </ul>
-    </div>
-</nav>
-      <body>
-    <center>
-      <h1>Welcome To Hexa</h1>
-      <h3>Hexa is a os build on linux system (ubuntu)</h3>
-      <br><br>
-	    <a href="/login" onclick="Swal.fire({
-  title: 'You must be user or login',
-  icon: 'error'
-})"><button style="margin-top: 40px;" class="btn btn-outline-info"><svg width="25" height="25" class="bi" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M2.5 10a.5.5 0 01.5.5V14a1 1 0 001 1h12a1 1 0 001-1v-3.5a.5.5 0 011 0V14a2 2 0 01-2 2H4a2 2 0 01-2-2v-3.5a.5.5 0 01.5-.5z" clip-rule="evenodd"/>
-<path fill-rule="evenodd" d="M7 9.5a.5.5 0 01.707 0L10 11.793 12.293 9.5a.5.5 0 01.707.707l-2.646 2.647a.5.5 0 01-.708 0L7 10.207A.5.5 0 017 9.5z" clip-rule="evenodd"/>
-<path fill-rule="evenodd" d="M10 3a.5.5 0 01.5.5v8a.5.5 0 01-1 0v-8A.5.5 0 0110 3z" clip-rule="evenodd"/>
-</svg><span class="b-txt">Download </span></button></a>
-    </center>
-  <!-- IMG -->  <img style="        margin-left: -817px;
-    margin-top: 30px;" src="https://cdn.hexa1.tk/Hexa.png">
-      <!-- TEXT --> <h1 style="    margin-top: -167px;
-    margin-left: 549px;">Hexa-Os</h1>
-    <!-- DESK --> <h3 style="margin-left: 540px;">HexaOs is based on the open source Linux kernel. Linux is more secure than other operating systems.</h3>
-    <br><br>
-    <center>
-      <a onclick="Swal.fire({
-  title: '400 Bad Request',
-  icon: 'error',
-  html:'<center></center><hr><center>cloudflare</center>'
-})"><button style="margin-top: 40px;" class="btn btn-outline-warning"><svg width="25" height="25" class="bi" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M2 5a2 2 0 012-2h12a2 2 0 012 2v10a2 2 0 01-2 2H4a2 2 0 01-2-2V5zm9.5 5.5h-3a.5.5 0 000 1h3a.5.5 0 000-1zm-6.354-.354L6.793 8.5 5.146 6.854a.5.5 0 11.708-.708l2 2a.5.5 0 010 .708l-2 2a.5.5 0 01-.708-.708z" clip-rule="evenodd"/>
-</svg><span class="b-txt">Source </span></button></a>
-      <a href="/hexa"><button style="margin-top: 40px;" class="btn btn-outline-primary"><svg width="25" height="25" class="bi" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M9.27 3.047a1 1 0 011.46 0l6.345 6.77c.6.638.146 1.683-.73 1.683H13.5v1a1 1 0 01-1 1h-5a1 1 0 01-1-1v-1H3.654c-.875 0-1.328-1.045-.73-1.684L9.27 3.047zm7.076 7.453L10 3.731 3.654 10.5H6.5a1 1 0 011 1v1h5v-1a1 1 0 011-1h2.846zm-9.846 5a1 1 0 011-1h5a1 1 0 011 1v1a1 1 0 01-1 1h-5a1 1 0 01-1-1v-1zm6 0h-5v1h5v-1z" clip-rule="evenodd"/>
-</svg><span class="b-txt">Hexa Store</span></button></a>
-    </center>
-	      </div>
-   <script src="inn.js"></script>
-	<script src="auth.js" type="102c0332a86faa53b5330a7b-text/javascript"></script>
-      <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-auth.js"></script>
-  </body>
-</html>
-<script>
-var myVar;
-
-function myFunction() {
-  myVar = setTimeout(showPage, 3000);
-}
-
-function showPage() {
-  document.getElementById("loader").style.display = "none";
-  document.getElementById("myDiv").style.display = "block";
-}
-</script>
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
 
